@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* this define 1 rem = */
+    font-size: 10px;
+    ;
+}
+
+body:before {
+    /* for blur background*/
+    content: '';
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url('calc_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(.1rem);
+}
+
+.centercalcy {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* for the centering of the calculator */
+    top: 50%;
+    right: 50%;
+    transform: translate(140px, -50%);
+    position: absolute;
+    /*without this property the div sec of the cal will not be visible */
+}
+
+form {
+    /* position: absolute; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* THESE R THE PROPERTIES INHERITED BY THE ID app_name AS IT BELONGS INSIDE THE FORM TAG*/
+    width: 26rem;
+    height: 32rem;
+    box-shadow: 0 0 10px 1px green;
+    /*to make the box of perfect size from the button*/
+}
+
+#app_name {
+    width: inherit;
+    font-size: 1.5rem;
+    padding: .8rem 0 .7rem 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(105, 94, 89);
+    color: linen;
+    border: none;
+    outline: none;
+}
+
+#display_ans {
+    width: inherit;
+    /*means it will inherit the prperty of the prev class thus its automatically becoms 100%  */
+    height: 6.5rem;
+    background-color: #ef476f;
+    font-size: 2rem;
+    color: white;
+    text-align: right;
+    padding-right: 1.5rem;
+}
+
+.layer1 {
+    width: inherit;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.layer2 {
+    width: inherit;
+    height: 3.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    flex: 1;
+    font-size: 1.4rem;
+    color: rgb(6, 59, 61);
+    border: .08rem solid #ff5d8f;
+    outline: none;
+}
+
+.layer1 .num {
+    background-color: #e5b3fe;
+}
+
+.layer2 .operator {
+    color: black;
+}
